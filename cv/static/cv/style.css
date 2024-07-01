@@ -1,0 +1,1395 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+:root{
+    --shad_clr: #0f0f0f4f;
+    --shad: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    --shad_c:rgba(0, 0, 0, .15);
+    --shad_sm: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    --shad_sm_c:rgba(0, 0, 0, .075);
+    --shad_lg: 0 1rem 3rem rgba(0, 0, 0, .175);
+    --shad_lg_c:rgba(0, 0, 0, .175);
+    --text-gray: #c7c5c5;
+    --clr1: #F69783;
+    --clr2: #F4F4F4;
+    --clr3: lightgrey;
+    --clr4: #818181;
+    --clr5: #591C21;
+    --clr5_transparent: #591C2164;
+    --clr6: #591c2164;
+    --clr7: #F4F4F4;
+    --clr8: #D92525;
+    --clr9: #00000066;
+    --clr10: #995846;
+    --clr10_transparent: #99584664;
+    --clr11: #5e706f;
+    --clr12: #D47C2F;
+    --curve-design-radius: 5rem;
+    --gray-bg: #F1F1F1;
+    --gray-bg-2: #EAEEF1;
+    --gray-bg-3: #ECF0F3;
+    --dark-bg-1: #39373d;
+    --colored-bg: #FAFAFA;
+    --service-c-1: #A14065;
+    --service-c-2: #592026;
+    --service-c-3: #F7C8CA;
+    --service-c-4: #7D484E;
+    --footer-bg-1: #141F23;
+    --footer-bg-2: #242424;
+    /* --test: #363535; */
+}
+
+body {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.5;
+    color: var(--clr4);
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    transition-duration: .5s;
+}
+
+/* ............................................ */
+/* ............................................ */
+/* ..............%   BASE   %.................. */
+/* ............................................ */
+/* ............................................ */
+
+/* .............................................. */
+/* .............%   NAV BAR   %.................. */
+.my-bar{
+    position: relative;
+    width: 100%;
+    display: block;
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: var(--shad);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.my-bar-ul{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar-on-laptop{
+    display: block;
+}
+
+.my-bar li{
+    list-style-type: none;
+}
+
+.my-bar li a{
+    text-decoration: none;
+    color: var(--clr5);
+    /* font-size: 18px; */
+    transition-duration: 0.5s;
+}
+
+.my-bar li a:hover{
+    color: var(--clr1);
+    font-size: 20px;
+    border-bottom: solid 3px var(--clr1);
+}
+
+.contact-nav-link{
+    background-color: var(--clr5);
+    padding: 5px 20px;
+    color: white !important;
+    border-radius: 4rem;
+}
+
+.contact-nav-link:hover{
+    background-color: white;
+    color: var(--clr10);
+    border-bottom: 2px solid var(--clr10);
+    border-left: 2px solid var(--clr10);
+}
+
+/* ********** NAVBAR FOR PHONE *********** */
+.navbar-on-phone{
+    display: none;
+}
+
+
+
+/* *********** FLOATING MENU **************** */
+.floating-menu-btn-container{
+    position: fixed;
+    bottom: 2.1%;
+    left: 0;
+    display: flex;
+    justify-content: end;
+    width: 30px;
+    opacity: 1;
+    padding: 5px 15px 5px 10px;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    /* background-color: var(--dark-bg-1); */
+    background-color: var(--clr10);
+    box-shadow: 0 .2rem .5rem var(--shad_clr);
+    z-index: 100;
+    transition-duration: .5s;
+}
+
+.floating-menu-btn-container button{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.floating-menu-btn-icon{
+    display: block;
+    width: 70%;
+}
+
+
+.floating-menu-container{
+    position: fixed;
+    bottom: 0;
+    left: -100%;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    z-index: 10;
+    transition-duration: .5s;
+}
+
+.floating-menu-ul{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: var(--dark-bg-1);
+    padding: 7px 10px;
+    border-radius: 2rem;
+    box-shadow: 0 .2rem .5rem var(--shad_clr);
+    opacity: 1;
+}
+
+.floating-menu-ul a{
+    text-decoration: none;
+}
+
+.floating-menu-container img{
+    display: block;
+    width: 20px;
+    transition-duration: .3s;
+}
+
+.floating-menu-container img:hover{
+    padding-bottom: 3px;
+    border-bottom: 2px solid var(--clr10);
+}
+
+
+
+/* .............................................. */
+/* ..............%   FLOATING BUTTON   %.......... */
+div.floating_button_div{
+    position: fixed;
+    bottom: 2.3%;
+    right: 3%;
+    z-index: 10;
+    border-radius: 50%;
+    box-shadow: 0 .3rem .3rem .2rem var(--shad_clr);
+    transition-duration: .5s;
+    z-index: 50;
+}
+  
+div.floating_button_div:hover{
+bottom: 2.6%;
+right: 25px;
+box-shadow: .2rem .4rem .3rem .2rem var(--shad_clr);
+}
+
+div.floating_button_div a{
+text-decoration: none;
+color: white;
+}
+
+div.floating_button_div img{
+width: 2.5rem;
+display: block;
+}
+
+
+/* **********************************************
+************ FOOTER ************************** */
+footer.my-footer{
+    background-color: var(--footer-bg-2);
+    border-top-left-radius: 2rem;
+    /* padding: 100px 50px; */
+}
+
+.my-skills, .footer{
+    padding: 100px 50px;
+}
+
+.my-skills-h2{
+    padding-top: 70px;
+    margin-bottom: -70px !important;
+}
+
+.my-skills{
+    padding-top: 0;
+}
+
+.my-skills .cat-title{
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    font-size: 25px;
+    color: #aaaaaa;
+}
+
+.skills-category{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+table.skill{
+    width: 180px;
+    margin-right: 2rem;
+}
+
+.skill-icon-tr img{
+    display: block;
+    width: 100%;
+}
+
+.skill-text-div{
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* .skill-text-div h3{
+    
+} */
+
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* margin-top: 100px; */
+    background-color: var(--footer-bg-1);
+    border-bottom-right-radius: var(--curve-design-radius);
+    padding-bottom: 30px;
+}
+
+.footer-left-block, .footer-right-block{
+    width: 50%;
+}
+
+.footer-left-block .social-media-div{
+    display: flex;
+    justify-content: start;
+}
+
+.footer h2{
+    margin-bottom: 20px;
+    border-bottom: none;
+}
+
+.social-media-div img{
+    display: block;
+    width: 25px;
+    margin-right: 2rem;
+}
+
+.copyright{
+    margin-top: 50px;
+    font-size: 13px;
+    color: #525555;
+}
+
+
+.footer-right-block{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-right-block img{
+    display: block;
+    width: 30%;
+    box-shadow: 1rem 1rem #262F2E;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.footer-bottom-design-div-parent{
+    background-color: var(--footer-bg-1);
+}
+
+.footer-bottom-design-div-child{
+    background-color: var(--footer-bg-2);
+    border-top-left-radius: var(--curve-design-radius);
+    height: 20px;
+}
+
+
+/* ............................................ */
+/* ............................................ */
+/* .............%   INDEX   %.................. */
+/* ............................................ */
+/* ............................................ */
+
+/* ........................................... */
+/* .............%   HEADER   %................ */
+header{
+    width: 100%;
+    background-color: var(--clr10);
+}
+
+.header-for-phone{
+    display: none;
+}
+
+.header-for-laptop{
+    display: flex;
+}
+
+div.header-box{
+    width: 100%;
+    overflow: hidden;
+    position: relative; 
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    border-bottom-right-radius: var(--curve-design-radius);
+
+}
+
+div.profil_text{
+    width: 55%;
+    text-align: center;
+    background-color: rgba(36, 36, 36, 0.391);
+}
+
+h1{
+    color: white;
+    margin: 50px 0 0 0;
+    font-size: 50px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+div.short_line{
+    height: 2px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+div.profil_text p{
+    color: var(--clr2);
+    font-size: 20px;
+    margin-bottom: 50px;
+    padding: 0 30px;
+    padding-top: 20px;
+}
+
+.main_button_container0{
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+div.main_button{
+    padding: 5px 20px;
+    display: inline-block;
+    background-color: var(--clr5);
+}
+
+div.main_button a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+div#email p{
+    /* font-size: 15px; */
+    text-align: left;
+    margin-bottom: 0;
+    padding: 5px 20px;
+    background-color: var(--clr10_transparent);
+}
+
+div.profil_img_container{
+    background-color: rgb(235, 230, 230);
+    width: 50%;
+    box-shadow: -5px 0px 6px 6px var(--clr9
+    );
+    margin-right: -10px;
+}
+
+header img{
+    display: block;
+    width: 100%;
+    
+}
+
+div.email_lower_at_bottom p{
+    margin-bottom: 0;
+}
+
+div.email_lower_at_bottom p a{
+    text-decoration: none;
+    color: lightgrey;
+    font-size: 13px;
+}
+
+
+/* ................................................... */
+/* .............%   PROFIL INTRO   %.................. */
+
+section.intro{   
+    background: linear-gradient( var(--clr10), var(--clr10), var(--clr10), white);
+    margin-top: -2px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+section.intro .intro-block{
+    padding: 10px 20px 40px 20px;
+    border-top-left-radius: var(--curve-design-radius);
+    background: linear-gradient(var(--colored-bg), white);
+    /* color: white; */
+}
+
+section.intro p{
+    display: inline-block;
+    max-width: 720px;
+    margin: 50px 0 30px 0;
+}
+
+
+/* *********** WHAT I CAN DO ********************
+********************************************** */
+section.services{
+    padding: 30px 30px;
+}
+
+.my-services-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+table.service{
+    width: 45%;
+    border-radius: 1rem;
+    box-shadow: var(--shad);
+    margin-bottom: 50px;
+    padding: 30px 15px 10px 15px;
+}
+
+.service-img-box{
+    height: 250px;
+    border-radius: 1rem;
+}
+
+.service-info-cell{
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.service-desc-box{
+    padding: 10px;
+}
+
+.service-info-row{
+    text-align: center;
+}
+
+.service-info-row h3{
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--clr12);
+}
+
+
+
+/* ................................................... */
+/* ................%   MORE INFO   %.................. */
+
+section.More_info{
+    background-color: var(--clr7);
+    padding: 100px 0px 30px 0;
+    margin: 0;
+    box-shadow: 0 2rem 2rem var(--shad_lg_c);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+div.txt{
+    width: 60%;
+    text-align: justify;
+    display: inline-block;
+    z-index: 3;
+    margin: 0px 0 50px 50px;
+    padding: 10px 0px 40px 0px;
+}
+
+.about_me_paragraph{
+    text-align: justify;
+    margin: 20px 100px;
+}
+
+h2{
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--clr10);
+    display: inline-block;
+    border-bottom: solid 3px var(--clr10);
+}
+
+div.h2_container{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.img_box{
+    height: 300px;
+    width: 70%;
+}
+
+
+
+table.box{
+    width: 100%;
+    border-spacing: 0;
+    margin-left: -1px;
+}
+
+table.for-laptop{
+    display: table;
+}
+
+table.for-phone{
+    display: none;
+}
+
+.box .cell_cont{
+    display: flex;
+    justify-content: end;
+}
+
+
+.img-cell-cont{
+    width: 100%;
+    background-color: var(--clr10);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 15px 0;
+}
+
+.box img{
+    width: 75%;
+    display: block;
+    position: relative;
+    right: -5rem;
+    box-shadow: var(--shad);
+    transition-duration: 1s;
+    border-radius: 1rem; 
+}
+
+.box img:hover{
+    width: 90%;
+    right: -110px;
+}
+
+.box .p2{
+    display: block;
+    width: 60%;
+    font-size: 18px;
+    text-align: justify;
+    margin: 0 100px 0 0;
+    padding-left: 100px;
+}
+
+a.bouton_linkedin{
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    color: var(--clr11);
+    border-bottom: solid 3px var(--clr11);
+    padding: 5px 15px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+/* ................................................... */
+/* ................%   Portfolio   %.................. */
+
+section.portfolio{
+    padding-bottom: 50px;
+}
+
+section.portfolio h2{
+    margin-top: 80px;
+    margin-bottom: 0;
+}
+
+div.portf_category{
+    margin: 100px 0;
+    text-align: center;
+}
+
+div.portf_category h3.portf_category_title{
+    display: inline-block;
+    color: var(--clr11);
+    border-bottom: solid 2px var(--clr11);
+    text-align: center;
+    font-size: 28px;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.layout_set{
+    border-collapse: collapse;
+    border-spacing: 10px;
+    margin-bottom: 50px;
+    width: 100%;
+    margin-left: -1px;
+}
+
+div.portf_layout{
+    width: 92%;
+    display: flex;
+    transition-duration: 1s;
+    box-shadow: 0px .5rem 1rem var(--clr9);
+}
+
+div.portf_layout:hover{
+    width: 97%;
+}
+
+div.portf_layout h3{
+    font-size: 18px;
+    color: var(--clr1);
+    text-align: left;
+}
+
+div.portf_layout div.img{
+    width: 40%;
+}
+
+div.portf_layout div.describ_text{
+    font-size: 16px;
+    text-align: left;
+    padding: 30px 40px;
+    width: 60%;
+}
+
+.arrow_td{
+    width: 5%;
+    padding: 0px 10px;
+    margin-right: 100px;
+    box-shadow: 0px .5rem 1rem var(--clr9);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+img.next_arrow{
+    width: 50px;
+    transform: rotate(90deg);
+}
+
+
+
+/* ............................................... */
+/* ................%   Quote   %.................. */
+
+section.quote{
+    padding: 100px 0;
+    margin: 100px 0;
+    background-color: #39373d;
+    border-radius: 1rem;
+}
+
+section.quote div.img_container{
+    max-width: 550px;
+    margin: 50px auto;
+    box-shadow: 0 1rem .8rem 1rem var(--shad_lg_c);
+}
+
+section.quote div.img{
+    width: 100%;
+    height: 0px;
+    padding-top: 100%;
+    margin: 50px auto;
+    background-color: var(--clr1);
+    background-size: contain;
+    animation: fondu 30s ease-in-out infinite both;
+    box-shadow: 0 -25rem 1rem rgba(0, 0, 0, .01) inset;
+    transition-duration: 1s;
+}
+
+section.quote div.img:hover{
+    animation-play-state: paused;
+    box-shadow: 0 -25rem 1rem var(--shad_lg_c) inset;
+}
+
+
+
+/* ................................................... */
+/* ................%   MESSAGE FORM   %............... */
+
+section.formulaire{
+    padding-top: 200px;
+    margin-bottom: 200px;
+}
+
+section.formulaire div.form_paper{
+    width: 80%;
+    box-shadow: 0 1rem 1rem var(--shad_lg_c);
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background: linear-gradient(var(--clr2), white);
+}
+
+section.formulaire h3{
+    margin-top: 0;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--clr10);
+    margin-bottom: 0;
+}
+
+section.formulaire div.form_paper .p-container{
+    background: linear-gradient( var(--clr10), var(--clr10), var(--clr10), white);
+    margin: 0;
+}
+
+section.formulaire div.form_paper p{
+    color: var(--clr4);
+    padding: 40px 70px 20px 90px;
+    font-size: 18px;
+    border-top-left-radius: 5rem;
+    background:var(--clr2);
+    display: block;
+    /* width: 100%; */
+    margin-top: 0;
+}
+
+div.form_paper p a{
+    text-decoration: none;
+    color: var(--clr11);
+    border-bottom: solid 2px var(--clr11);
+}
+
+div.form_paper p a:hover{
+    font-size: 19px;
+}
+
+form{
+    width: 100%;
+    text-align: center;
+    padding: 10px 10px 30px 0px;
+}
+
+form div{
+    margin-top: 20px;
+}
+
+label{
+    display: inline-block;
+    width: 80px;
+    text-align: left;
+    color: var(--clr4);
+    font-weight: bold;
+}
+
+input, textarea{
+    font-family: arial;
+    width: 250px;
+    box-sizing: border-box;
+    border: 1px solid var(--clr4);
+}
+
+input:focus, textarea:focus{
+    border-color: var(--clr1);
+}
+
+div.form_button{
+    text-align: center;
+}
+
+div.form_button button{
+    padding: 5px 30px;
+    background-color: white;
+    box-shadow: 0 .3rem 1rem var(--shad_lg_c) inset;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-weight: bold;
+    transition-duration: .5s;
+}
+
+div.form_button button:hover{
+    transform: scale(.9);
+}
+
+
+
+/* ............................................ */
+/* ............................................ */
+/* .............%   PORTFOLIO   %.............. */
+/* ............................................ */
+/* ............................................ */
+
+/* .................................................... */
+/* .............%   HEADER CAROUSEL   %................ */
+
+.portfolio-title-container{
+    background-color: var(--clr5);
+}
+
+.portfolio-title-container h2{
+    color: rgb(211, 211, 211);
+    display: block;
+    margin: 0;
+    text-align: center;
+    padding: 20px 0px;
+    border-bottom: 0px solid white;
+}
+
+.carousel-inner{
+    background-color: var(--clr5);
+}
+
+.carousel-inner img {
+    border-top-left-radius: 40%;
+}
+
+
+/* .................................................... */
+/* ...........%   PORTFOLIO DESCRIPTION   %............ */
+section.portf-desc .visit-or-download{
+    margin-top: 50px;
+    text-align: center;
+}
+
+section.portf-desc .visit-or-download a{
+    text-decoration: none;
+    color: var(--clr1);
+    border: 2px solid var(--clr1);
+    border-radius: 3rem;
+    padding: 5px 20px;
+    background-color: var(--clr7);
+
+}
+
+section.portf-desc p{
+    margin: 50px;
+}
+
+div.second-parag-container{
+    margin: 30px 0;
+    padding: 0;
+}
+
+.bug_line_cover{
+    display: block;
+    border: 1px solid white;
+    background-color: white;
+    height: 8px;
+}
+
+.top_bug_line_cover{
+    transform: translateY(-7px);
+}
+
+.bottom_bug_line_cover{
+    transform: translateY(7px);
+}
+
+#first-parag{
+    margin-bottom: 10px;
+}
+
+div.second-parag-container p{
+    padding: 150px 50px;
+    color: #d8d6d6;
+    margin: 0;
+}
+
+#third-parag{
+    margin-top: 10px;
+}
+
+
+
+
+
+/* ................................................... */
+/* ................................................... */
+/* .............%   PHONE DESIGN   %.................. */
+/* ................................................... */
+/* ................................................... */
+@media only screen and (max-width: 767px){
+
+    body {
+        font-size: 15px;
+    }
+    
+    /* ............................................ */
+    /* ..............%   BASE   %.................. */
+    /* ............................................ */
+   
+    /* .............................................. */
+    /* .............%   NAV BAR   %.................. */
+    .my-bar li a{
+        color: var(--clr5);
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .my-bar li a:hover{
+        font-size: 17px;
+    }
+
+    .navbar-on-laptop{
+        display: none;
+    }
+
+    .navbar-on-phone{
+        display: block;
+        padding: 0;
+        z-index: 1000;
+    }
+
+    .navbar-on-phone ul{
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 15px 0 12px 0;
+    }
+
+    .navbar-on-phone button{
+        border: none;
+        background-color: white;
+    }
+    
+    .navbar-on-phone li{
+        padding: 0 10px;
+    }
+
+        
+    ul.menu-box{
+        position: absolute;
+        display: block;
+        margin-top: 0;
+        background-color: #F5F0F3;
+        padding: 20px 0;
+        z-index: -5;
+        box-shadow: var(--shad);
+        transition-duration: .6s;
+        border-bottom-right-radius: var(--curve-design-radius);
+    }
+
+    .dark-cover{
+        position: absolute;
+        top: -500%;
+        opacity: 0;
+        background: linear-gradient(#000000c4, #000000c4, rgba(255, 255, 255, 0));
+        backdrop-filter: blur(10px);
+        z-index: -10;
+        transition-duration: .5s;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .menu-box li{
+        padding: 15px 10px;
+        font-weight: 100;
+    }
+    
+    .nav-menu-logo{
+        width: 20px;
+    }
+
+    .floating-menu-ul{
+        width: 55%;
+    }
+
+    .floating-menu-container img{
+        width: 18px;
+    }
+
+
+
+        /* **********************************************
+    ************ FOOTER ************************** */
+        
+    .my-skills, .footer{
+        padding: 100px 20px;
+    }
+
+    .my-skills{
+        padding-top: 0;
+        padding-bottom: 60px;
+    }
+
+
+    .footer{
+        padding-top: 60px;
+    }
+
+    .my-skills .cat-title{
+        font-size: 18px;
+    }
+     
+    table.skill{
+        width: 100px;
+        margin-right: 0;
+    }
+
+    .skill-text-div h3{
+        font-size: 15.5px;
+    }
+
+    .footer-left-block, .footer-right-block{
+        width: 100%;
+    }
+
+    .footer h2{
+        margin-bottom: 0;
+    }
+
+    .social-media-div {
+        margin-top: 40px;
+    }
+
+    .social-media-div img{
+        display: block;
+        width: 25px;
+        margin-right: 1rem;
+    }
+
+    .copyright{
+        margin-bottom: 50px;
+    }
+        
+    .footer-right-block{
+        margin-right: 20px;
+        justify-content: space-between;
+    }
+
+    .footer-right-block img{
+        width: 37%;
+        border-top-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+    }
+
+
+
+
+    
+    /* ............................................ */
+    /* .............%   INDEX   %.................. */
+    /* ............................................ */
+
+    /* ............................................. */
+    /* .............%   HEADER   %.................. */
+    @media only screen and (max-width: 600px){
+        div.profil_text{
+            box-shadow: 5px 0px 6px 6px var(--clr9
+            );
+        }
+        
+        div.profil_img_container{
+            background-color: rgba(235, 230, 230, 0);
+            width: 42%;
+            box-shadow: 10px 0px 6px 6px var(--clr9);
+        }
+    }
+
+    /* ........................................... */
+    /* .............%   HEADER   %................ */
+
+    h1{
+        font-size: 22px;
+        padding-bottom: 4px;
+    }
+
+
+    .header-for-laptop{
+        /* display: none; */
+        display: flex;
+    }
+
+    /* ++++++++++ HEADER FOR PHONE +++++++++++  */
+    .header-for-phone{
+        /* display: block; */
+        display: none;
+        margin-top: 0;
+        border-bottom-right-radius: var(--curve-design-radius);
+    }
+
+    .header-for-phone h1{
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 35px;
+        text-align: center;
+        color: var(--clr10);
+    }
+
+    .img-flex-box{
+        display: flex; 
+        justify-content: end;
+    }
+
+    .header-for-phone .profil_img_container{
+        width: 80%;
+    }
+
+    .h-desc-flexbox{
+        width: 80%;
+        padding: 20px 0 20px 20px;
+        background-color: #24242464;
+    }
+
+        
+    .header-for-phone .main_button_container0{
+        margin-bottom: 0;
+    }
+
+    .header-for-phone #email p{
+        margin-top: 0;
+    }
+
+
+    /* ++++++++++++++++++++++++++++++++++++++++ */
+
+    div.short_line{
+        width: 100px;
+    }
+
+    div.profil_text p{
+        font-size: 16px;
+        padding: 0 10px;
+        padding-top: 15px;
+    }
+
+    div.main_button{
+        padding: 5px 20px;
+    }
+
+    div.main_button a{
+        font-size: 17px;
+    }
+
+    div.email_lower_at_bottom p a{
+        font-size: 11px;
+    }
+
+        /* *********** WHAT I CAN DO ********************
+    ********************************************** */
+    section.services{
+        padding: 30px 10px;
+    }
+
+    table.service{
+        width: 98%;
+        padding: 15px 15px 10px 15px;
+    }
+
+    .service-img-box{
+        height: 200px;
+    }
+
+    .service-desc-box{
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .service-info-row h3{
+        font-size: 16px;
+    }
+
+
+
+
+    /* .................................................... */
+
+    /* ................................................... */
+    /* ................%   MORE INFO   %.................. */
+    div.txt{
+        width: 90%;
+        display: block;
+        margin: 0;
+        padding-left: 17px;
+        font-size: 16px;
+    }
+
+    .about_me_paragraph{
+        text-align: justify;
+        margin: 20px 30px;
+    }
+
+    h2{
+        font-size: 22px;
+    }
+
+    
+    table.for-laptop{
+        display: none;
+    }
+
+    table.for-phone{
+        display: table;
+        width: 100%;
+    }
+    
+    .img-cell-cont{
+        width: 70%;
+    }
+    
+    .box img{
+        width: 100%;
+        right: -60px;
+    }
+    
+    .box img:hover{
+        width: 110%;
+        right: -80px;
+    }
+    
+    .box .p2{
+        width: 100%;
+        font-size: 15px;
+        margin: 20px 30px 0 30px;
+        padding-left: 0;
+    }
+
+
+    /* ................................................... */
+    /* ................%   Portfolio   %.................. */
+    section.portfolio{
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    div.portf_category{
+        margin: 70px 0;
+    }
+
+    div.portf_category h3.portf_category_title{
+        font-size: 17px;
+    }
+
+    div.portf_layout h3{
+        font-size: 16px;
+    }
+
+    div.portf_layout div.img{
+        width: 55%;
+    }
+
+    div.portf_layout div.describ_text{
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+    
+    img.next_arrow{
+        width: 30px;
+    }
+
+
+    /* ............................................... */
+    /* ................%   Quote   %.................. */
+    section.quote{
+        margin: 100px 0 0 0;
+    }
+
+
+    /* ................................................... */
+    /* ................%   MESSAGE FORM   %............... */
+    section.formulaire h3{
+        font-size: 17px;
+    }
+
+    section.formulaire div.form_paper{
+        width: 92%;
+    }
+
+    section.formulaire div.form_paper p{
+        padding: 20px 30px 20px 60px;
+        font-size: 15px;
+        margin-top: -1px;
+        /* margin-right: -1px; */
+    }
+
+    div.form_paper p a:hover{
+        font-size: 17px;
+    }
+
+    label{
+        font-size: 13px;
+        width: 70px;
+        padding-left: 10px;
+        /* margin-right: 5px; */
+    }
+
+    input, textarea{
+        width: 200px;
+    }
+
+
+
+    /* ............................................ */
+    /* .............%   PORTFOLIO   %.............. */
+    /* ............................................ */
+
+    /* .................................................... */
+    /* ...........%   PORTFOLIO DESCRIPTION   %............ */
+    section.portf-desc .visit-or-download a{
+    padding: 3px 10px;
+    font-size: 14px;
+
+}
+    
+    section.portf-desc p{
+        margin: 30px;
+        font-size: 15px;
+    }
+
+    div.second-parag-container p{
+        padding: 80px 30px;
+        margin: 0;
+    }
+
+
+}
+
